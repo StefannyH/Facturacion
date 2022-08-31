@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facturacion Electronica", "Facturacion Electronica.csproj", "{4CB0601D-0D93-41E5-9635-F6536E7EA0AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CB0601D-0D93-41E5-9635-F6536E7EA0AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CB0601D-0D93-41E5-9635-F6536E7EA0AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CB0601D-0D93-41E5-9635-F6536E7EA0AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CB0601D-0D93-41E5-9635-F6536E7EA0AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56EF514C-3BBD-4B20-AB5D-2E9BBF22517B}
+	EndGlobalSection
+EndGlobal
