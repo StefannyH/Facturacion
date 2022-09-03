@@ -6,5 +6,12 @@ namespace Facturacion_Electronica
         {
             InitializeComponent();
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Principal frm = new Principal();
+            frm.Show();
+        }
     }
 }
