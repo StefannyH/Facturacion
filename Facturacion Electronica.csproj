@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="CapaNegocio\" />
     <Folder Include="Utilidades\" />
   </ItemGroup>
 

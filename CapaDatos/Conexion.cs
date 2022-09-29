@@ -11,7 +11,7 @@ namespace Facturacion_Electronica.CapaDatos
     public  class Conexion
     {
         private SqlConnection Con = new
-            SqlConnection("Data Source=DESKTOP-4PMJGRE;Integrated Security=True");
+            SqlConnection("Data Source=DESKTOP-4PMJGRE;Initial Catalog=Facturacion;Integrated Security=True");
 
         /// <summary>
         /// Abrir la conexión hacia la base de datos

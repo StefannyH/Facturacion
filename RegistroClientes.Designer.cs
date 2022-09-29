@@ -42,12 +42,10 @@
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.DgvRegistroClientes = new System.Windows.Forms.DataGridView();
-            this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreComercial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CorreoEletronico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
+            this.lblDocumento = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegistroClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,16 +68,18 @@
             this.btnRegistrar.TabIndex = 1;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnModificar.Location = new System.Drawing.Point(508, 118);
+            this.btnModificar.Location = new System.Drawing.Point(508, 119);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(100, 31);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // lblTipoDocumento
             // 
@@ -95,7 +95,7 @@
             // 
             this.lblNombreComercial.AutoSize = true;
             this.lblNombreComercial.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNombreComercial.Location = new System.Drawing.Point(74, 118);
+            this.lblNombreComercial.Location = new System.Drawing.Point(74, 147);
             this.lblNombreComercial.Name = "lblNombreComercial";
             this.lblNombreComercial.Size = new System.Drawing.Size(135, 19);
             this.lblNombreComercial.TabIndex = 4;
@@ -105,7 +105,7 @@
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDireccion.Location = new System.Drawing.Point(136, 158);
+            this.lblDireccion.Location = new System.Drawing.Point(136, 187);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(73, 19);
             this.lblDireccion.TabIndex = 5;
@@ -115,7 +115,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(142, 190);
+            this.label5.Location = new System.Drawing.Point(142, 219);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 19);
             this.label5.TabIndex = 6;
@@ -125,7 +125,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(81, 222);
+            this.label6.Location = new System.Drawing.Point(81, 251);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 19);
             this.label6.TabIndex = 7;
@@ -143,7 +143,7 @@
             // txtNombreComercial
             // 
             this.txtNombreComercial.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtNombreComercial.Location = new System.Drawing.Point(258, 118);
+            this.txtNombreComercial.Location = new System.Drawing.Point(258, 147);
             this.txtNombreComercial.Name = "txtNombreComercial";
             this.txtNombreComercial.Size = new System.Drawing.Size(244, 26);
             this.txtNombreComercial.TabIndex = 9;
@@ -151,7 +151,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtDireccion.Location = new System.Drawing.Point(258, 151);
+            this.txtDireccion.Location = new System.Drawing.Point(258, 180);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(244, 26);
             this.txtDireccion.TabIndex = 10;
@@ -159,7 +159,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtTelefono.Location = new System.Drawing.Point(258, 183);
+            this.txtTelefono.Location = new System.Drawing.Point(258, 212);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(244, 26);
             this.txtTelefono.TabIndex = 11;
@@ -167,7 +167,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtCorreo.Location = new System.Drawing.Point(258, 215);
+            this.txtCorreo.Location = new System.Drawing.Point(258, 244);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(244, 26);
             this.txtCorreo.TabIndex = 12;
@@ -175,47 +175,16 @@
             // DgvRegistroClientes
             // 
             this.DgvRegistroClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvRegistroClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TipoDocumento,
-            this.NombreComercial,
-            this.Direccion,
-            this.Telefono,
-            this.CorreoEletronico});
-            this.DgvRegistroClientes.Location = new System.Drawing.Point(35, 270);
+            this.DgvRegistroClientes.Location = new System.Drawing.Point(48, 279);
             this.DgvRegistroClientes.Name = "DgvRegistroClientes";
             this.DgvRegistroClientes.RowTemplate.Height = 25;
             this.DgvRegistroClientes.Size = new System.Drawing.Size(579, 176);
             this.DgvRegistroClientes.TabIndex = 13;
             // 
-            // TipoDocumento
-            // 
-            this.TipoDocumento.HeaderText = "TipoDocumento";
-            this.TipoDocumento.Name = "TipoDocumento";
-            // 
-            // NombreComercial
-            // 
-            this.NombreComercial.HeaderText = "Nombrecomercial";
-            this.NombreComercial.Name = "NombreComercial";
-            // 
-            // Direccion
-            // 
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            // 
-            // CorreoEletronico
-            // 
-            this.CorreoEletronico.HeaderText = "CorreoEletronico";
-            this.CorreoEletronico.Name = "CorreoEletronico";
-            // 
             // btnRegresar
             // 
             this.btnRegresar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRegresar.Location = new System.Drawing.Point(508, 155);
+            this.btnRegresar.Location = new System.Drawing.Point(508, 193);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(100, 31);
             this.btnRegresar.TabIndex = 14;
@@ -223,12 +192,44 @@
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // txtDocumento
+            // 
+            this.txtDocumento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtDocumento.Location = new System.Drawing.Point(258, 112);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(244, 26);
+            this.txtDocumento.TabIndex = 16;
+            // 
+            // lblDocumento
+            // 
+            this.lblDocumento.AutoSize = true;
+            this.lblDocumento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDocumento.Location = new System.Drawing.Point(124, 115);
+            this.lblDocumento.Name = "lblDocumento";
+            this.lblDocumento.Size = new System.Drawing.Size(85, 19);
+            this.lblDocumento.TabIndex = 15;
+            this.lblDocumento.Text = "Documento";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEliminar.Location = new System.Drawing.Point(508, 156);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(100, 31);
+            this.btnEliminar.TabIndex = 17;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // RegistroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(651, 467);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.txtDocumento);
+            this.Controls.Add(this.lblDocumento);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.DgvRegistroClientes);
             this.Controls.Add(this.txtCorreo);
@@ -246,6 +247,7 @@
             this.Controls.Add(this.lblRegistroClientes);
             this.Name = "RegistroClientes";
             this.Text = "RegistroClientes";
+            this.Load += new System.EventHandler(this.RegistroClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegistroClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -268,11 +270,9 @@
         private TextBox txtTelefono;
         private TextBox txtCorreo;
         private DataGridView DgvRegistroClientes;
-        private DataGridViewTextBoxColumn TipoDocumento;
-        private DataGridViewTextBoxColumn NombreComercial;
-        private DataGridViewTextBoxColumn Direccion;
-        private DataGridViewTextBoxColumn Telefono;
-        private DataGridViewTextBoxColumn CorreoEletronico;
         private Button btnRegresar;
+        private TextBox txtDocumento;
+        private Label lblDocumento;
+        private Button btnEliminar;
     }
 }

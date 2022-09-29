@@ -34,7 +34,6 @@
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtNombreComercial = new System.Windows.Forms.TextBox();
-            this.cbxRipoDocumento = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
@@ -68,6 +67,11 @@
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnGenerarFactura = new System.Windows.Forms.Button();
             this.btnAgregarProducto = new System.Windows.Forms.Button();
+            this.txtTipoDocumento = new System.Windows.Forms.TextBox();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtDocumentoCliente = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -93,7 +97,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtCorreo.Location = new System.Drawing.Point(191, 245);
+            this.txtCorreo.Location = new System.Drawing.Point(194, 278);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(244, 26);
             this.txtCorreo.TabIndex = 22;
@@ -101,7 +105,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtTelefono.Location = new System.Drawing.Point(191, 213);
+            this.txtTelefono.Location = new System.Drawing.Point(194, 246);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(244, 26);
             this.txtTelefono.TabIndex = 21;
@@ -109,7 +113,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtDireccion.Location = new System.Drawing.Point(191, 181);
+            this.txtDireccion.Location = new System.Drawing.Point(194, 214);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(244, 26);
             this.txtDireccion.TabIndex = 20;
@@ -117,25 +121,16 @@
             // txtNombreComercial
             // 
             this.txtNombreComercial.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtNombreComercial.Location = new System.Drawing.Point(191, 148);
+            this.txtNombreComercial.Location = new System.Drawing.Point(194, 181);
             this.txtNombreComercial.Name = "txtNombreComercial";
             this.txtNombreComercial.Size = new System.Drawing.Size(244, 26);
             this.txtNombreComercial.TabIndex = 19;
-            // 
-            // cbxRipoDocumento
-            // 
-            this.cbxRipoDocumento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbxRipoDocumento.FormattingEnabled = true;
-            this.cbxRipoDocumento.Location = new System.Drawing.Point(191, 109);
-            this.cbxRipoDocumento.Name = "cbxRipoDocumento";
-            this.cbxRipoDocumento.Size = new System.Drawing.Size(244, 27);
-            this.cbxRipoDocumento.TabIndex = 18;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(14, 252);
+            this.label6.Location = new System.Drawing.Point(17, 285);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 19);
             this.label6.TabIndex = 17;
@@ -145,7 +140,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(75, 220);
+            this.label5.Location = new System.Drawing.Point(78, 253);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 19);
             this.label5.TabIndex = 16;
@@ -155,7 +150,7 @@
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDireccion.Location = new System.Drawing.Point(69, 188);
+            this.lblDireccion.Location = new System.Drawing.Point(72, 221);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(73, 19);
             this.lblDireccion.TabIndex = 15;
@@ -165,7 +160,7 @@
             // 
             this.lblNombreComercial.AutoSize = true;
             this.lblNombreComercial.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNombreComercial.Location = new System.Drawing.Point(7, 148);
+            this.lblNombreComercial.Location = new System.Drawing.Point(10, 181);
             this.lblNombreComercial.Name = "lblNombreComercial";
             this.lblNombreComercial.Size = new System.Drawing.Size(135, 19);
             this.lblNombreComercial.TabIndex = 14;
@@ -175,7 +170,7 @@
             // 
             this.lblTipoDocumento.AutoSize = true;
             this.lblTipoDocumento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTipoDocumento.Location = new System.Drawing.Point(23, 117);
+            this.lblTipoDocumento.Location = new System.Drawing.Point(26, 116);
             this.lblTipoDocumento.Name = "lblTipoDocumento";
             this.lblTipoDocumento.Size = new System.Drawing.Size(119, 19);
             this.lblTipoDocumento.TabIndex = 13;
@@ -184,7 +179,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(635, 242);
+            this.textBox1.Location = new System.Drawing.Point(638, 275);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(244, 26);
             this.textBox1.TabIndex = 32;
@@ -192,7 +187,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(635, 210);
+            this.textBox2.Location = new System.Drawing.Point(638, 243);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(244, 26);
             this.textBox2.TabIndex = 31;
@@ -200,7 +195,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(635, 178);
+            this.textBox3.Location = new System.Drawing.Point(638, 211);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(244, 26);
             this.textBox3.TabIndex = 30;
@@ -208,7 +203,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(635, 145);
+            this.textBox4.Location = new System.Drawing.Point(638, 178);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(244, 26);
             this.textBox4.TabIndex = 29;
@@ -217,7 +212,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(635, 106);
+            this.comboBox1.Location = new System.Drawing.Point(639, 106);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(244, 27);
             this.comboBox1.TabIndex = 28;
@@ -226,7 +221,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(458, 249);
+            this.label3.Location = new System.Drawing.Point(461, 282);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 19);
             this.label3.TabIndex = 27;
@@ -236,7 +231,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(519, 217);
+            this.label4.Location = new System.Drawing.Point(522, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 19);
             this.label4.TabIndex = 26;
@@ -246,7 +241,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(513, 185);
+            this.label7.Location = new System.Drawing.Point(516, 218);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 19);
             this.label7.TabIndex = 25;
@@ -256,7 +251,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(451, 145);
+            this.label8.Location = new System.Drawing.Point(454, 178);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(135, 19);
             this.label8.TabIndex = 24;
@@ -442,12 +437,61 @@
             this.btnAgregarProducto.Text = "Agregar Producto";
             this.btnAgregarProducto.UseVisualStyleBackColor = true;
             // 
+            // txtTipoDocumento
+            // 
+            this.txtTipoDocumento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtTipoDocumento.Location = new System.Drawing.Point(190, 116);
+            this.txtTipoDocumento.Name = "txtTipoDocumento";
+            this.txtTipoDocumento.Size = new System.Drawing.Size(245, 26);
+            this.txtTipoDocumento.TabIndex = 51;
+            // 
+            // txtDocumento
+            // 
+            this.txtDocumento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtDocumento.Location = new System.Drawing.Point(190, 148);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(245, 26);
+            this.txtDocumento.TabIndex = 53;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(60, 148);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(85, 19);
+            this.label16.TabIndex = 52;
+            this.label16.Text = "Documento";
+            // 
+            // txtDocumentoCliente
+            // 
+            this.txtDocumentoCliente.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtDocumentoCliente.Location = new System.Drawing.Point(638, 145);
+            this.txtDocumentoCliente.Name = "txtDocumentoCliente";
+            this.txtDocumentoCliente.Size = new System.Drawing.Size(245, 26);
+            this.txtDocumentoCliente.TabIndex = 55;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.Location = new System.Drawing.Point(504, 145);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(85, 19);
+            this.label17.TabIndex = 54;
+            this.label17.Text = "Documento";
+            // 
             // FacturaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(894, 737);
+            this.Controls.Add(this.txtDocumentoCliente);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.txtDocumento);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.txtTipoDocumento);
             this.Controls.Add(this.btnAgregarProducto);
             this.Controls.Add(this.btnGenerarFactura);
             this.Controls.Add(this.btnRegresar);
@@ -480,7 +524,6 @@
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtNombreComercial);
-            this.Controls.Add(this.cbxRipoDocumento);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblDireccion);
@@ -490,6 +533,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FacturaVenta";
             this.Text = "FacturaVenta";
+            this.Load += new System.EventHandler(this.FacturaVenta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,7 +547,6 @@
         private TextBox txtTelefono;
         private TextBox txtDireccion;
         private TextBox txtNombreComercial;
-        private ComboBox cbxRipoDocumento;
         private Label label6;
         private Label label5;
         private Label lblDireccion;
@@ -537,5 +580,10 @@
         private Button btnRegresar;
         private Button btnGenerarFactura;
         private Button btnAgregarProducto;
+        private TextBox txtTipoDocumento;
+        private TextBox txtDocumento;
+        private Label label16;
+        private TextBox txtDocumentoCliente;
+        private Label label17;
     }
 }

@@ -30,8 +30,8 @@
         {
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblClave = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -56,22 +56,22 @@
             this.lblClave.TabIndex = 1;
             this.lblClave.Text = "Contraseña";
             // 
-            // textBox1
+            // txtUsuario
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(248, 123);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtUsuario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtUsuario.Location = new System.Drawing.Point(248, 123);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(232, 26);
+            this.txtUsuario.TabIndex = 2;
             // 
-            // textBox2
+            // txtContrasena
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(248, 161);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(232, 26);
-            this.textBox2.TabIndex = 3;
+            this.txtContrasena.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtContrasena.Location = new System.Drawing.Point(248, 161);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
+            this.txtContrasena.Size = new System.Drawing.Size(232, 26);
+            this.txtContrasena.TabIndex = 3;
             // 
             // btnIngresar
             // 
@@ -102,8 +102,8 @@
             this.ClientSize = new System.Drawing.Size(549, 357);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtContrasena);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.lblUsuario);
             this.Name = "Form1";
@@ -117,8 +117,8 @@
 
         private Label lblUsuario;
         private Label lblClave;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtUsuario;
+        private TextBox txtContrasena;
         private Button btnIngresar;
         private Label label1;
     }

@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             this.DgvRegistroProductos = new System.Windows.Forms.DataGridView();
-            this.Referencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtValorUnitario = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtReferencia = new System.Windows.Forms.TextBox();
             this.lblValorUnitario = new System.Windows.Forms.Label();
@@ -42,44 +39,26 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.lblRegistroProductos = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegistroProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvRegistroProductos
             // 
             this.DgvRegistroProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvRegistroProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Referencia,
-            this.Descripcion,
-            this.ValorUnitario});
             this.DgvRegistroProductos.Location = new System.Drawing.Point(111, 262);
             this.DgvRegistroProductos.Name = "DgvRegistroProductos";
             this.DgvRegistroProductos.RowTemplate.Height = 25;
             this.DgvRegistroProductos.Size = new System.Drawing.Size(552, 176);
             this.DgvRegistroProductos.TabIndex = 27;
             // 
-            // Referencia
+            // txtValorUnitario
             // 
-            this.Referencia.HeaderText = "Referencia";
-            this.Referencia.Name = "Referencia";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            // 
-            // ValorUnitario
-            // 
-            this.ValorUnitario.HeaderText = "ValorUnitario";
-            this.ValorUnitario.Name = "ValorUnitario";
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtTelefono.Location = new System.Drawing.Point(334, 175);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(244, 26);
-            this.txtTelefono.TabIndex = 25;
+            this.txtValorUnitario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtValorUnitario.Location = new System.Drawing.Point(334, 175);
+            this.txtValorUnitario.Name = "txtValorUnitario";
+            this.txtValorUnitario.Size = new System.Drawing.Size(244, 26);
+            this.txtValorUnitario.TabIndex = 25;
             // 
             // txtDescripcion
             // 
@@ -136,6 +115,7 @@
             this.btnModificar.TabIndex = 16;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnRegistrar
             // 
@@ -146,6 +126,7 @@
             this.btnRegistrar.TabIndex = 15;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // lblRegistroProductos
             // 
@@ -160,7 +141,7 @@
             // btnRegresar
             // 
             this.btnRegresar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRegresar.Location = new System.Drawing.Point(590, 182);
+            this.btnRegresar.Location = new System.Drawing.Point(590, 219);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(100, 31);
             this.btnRegresar.TabIndex = 28;
@@ -168,15 +149,27 @@
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEliminar.Location = new System.Drawing.Point(590, 182);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(100, 31);
+            this.btnEliminar.TabIndex = 29;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // RegistroProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.DgvRegistroProductos);
-            this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.txtValorUnitario);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtReferencia);
             this.Controls.Add(this.lblValorUnitario);
@@ -187,6 +180,7 @@
             this.Controls.Add(this.lblRegistroProductos);
             this.Name = "RegistroProductos";
             this.Text = "RegistroProductos";
+            this.Load += new System.EventHandler(this.RegistroProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegistroProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -195,7 +189,7 @@
 
         #endregion
         private DataGridView DgvRegistroProductos;
-        private TextBox txtTelefono;
+        private TextBox txtValorUnitario;
         private TextBox txtDescripcion;
         private TextBox txtReferencia;
         private Label lblValorUnitario;
@@ -204,9 +198,7 @@
         private Button btnModificar;
         private Button btnRegistrar;
         private Label lblRegistroProductos;
-        private DataGridViewTextBoxColumn Referencia;
-        private DataGridViewTextBoxColumn Descripcion;
-        private DataGridViewTextBoxColumn ValorUnitario;
         private Button btnRegresar;
+        private Button btnEliminar;
     }
 }
