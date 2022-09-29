@@ -66,7 +66,7 @@ namespace Facturacion_Electronica
             objetoCN.Delete(int.Parse(txtDocumento.Text));
             MessageBox.Show("Se elimino correctamente el cliente :)");
             viewAllClientes();
-            Limpiar();
+            Limpiar();  
         }
     }
 }
