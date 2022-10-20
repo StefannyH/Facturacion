@@ -19,6 +19,9 @@ namespace Facturacion_Electronica
         SqlCommand comando = new SqlCommand();
         SqlDataReader dataReader;
         DataTable table = new DataTable();
+        private BLLFactura NG = new BLLFactura();            
+       
+        string Codigo = "";
 
         public FacturaVenta()
         {
@@ -33,19 +36,106 @@ namespace Facturacion_Electronica
         }
 
         private void FacturaVenta_Load(object sender, EventArgs e)
-        {
-            comando.Connection = con.OpenConnection();
-            comando.CommandText = ("select * from Tbl_Vendedor where Documento = '10245785'");
-            SqlDataReader dataReader = comando.ExecuteReader();
+        {           
+            DatosVendedor();
+        }
 
-            txtTipoDocumento.Text = dataReader["TipoDocumento"].ToString();
-            txtDocumento.Text = dataReader["Documento"].ToString();
-            txtNombreComercial.Text = dataReader["NombreComercial"].ToString();
-            txtDireccion.Text = dataReader["Direccion"].ToString();
-            txtTelefono.Text = dataReader["Telefono"].ToString();
-            txtCorreo.Text = dataReader["Correo"].ToString();
+        public void  DatosVendedor()
+        {           
+            BLLFactura Factura = new BLLFactura();            
+            DataTable agua = new DataTable();
+            agua = Factura.Datos();
+            for (int i = 0; i < agua.Rows.Count; i++)
+            {
+                txtTipoDocumento.Text = agua.Rows[i]["TipoDocumento"].ToString();
+                txtDocumento.Text = agua.Rows[i]["Documento"].ToString();
+                txtNombreComercial.Text = agua.Rows[i]["NombreComercial"].ToString();
+                txtDireccion.Text = agua.Rows[i]["Direccion"].ToString();
+                txtTelefono.Text = agua.Rows[i]["Telefono"].ToString();
+                txtCorreo.Text = agua.Rows[i]["Correo"].ToString();
+            }
+        }
+
+        private void txtDocumentoCliente_TextChanged(object sender, EventArgs e)
+        {
+            BLLFactura Factura = new BLLFactura();
+            //Factura.Datos();
+            DataTable agua = new DataTable();
+            agua = Factura.DatosBuscarcliente(txtDocumentoCliente.Text);
+            for (int i = 0; i < agua.Rows.Count; i++)
+            {
+                txtTipoDocumentoCliente.Text = agua.Rows[i]["TipoDocumento"].ToString();
+                txtDocumentoCliente.Text = agua.Rows[i]["Documento"].ToString();
+                txtNombrecliente.Text = agua.Rows[i]["NombreComercial"].ToString();
+                txtDireccionCliente.Text = agua.Rows[i]["Direccion"].ToString();
+                txtTelefonoCliente.Text = agua.Rows[i]["Telefono"].ToString();
+                txtCorreoCliente.Text = agua.Rows[i]["Correo"].ToString();
+            }
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
 
         }
-      
+
+        private void txtReferencia_TextChanged(object sender, EventArgs e)
+        {
+            BLLFactura Factura = new BLLFactura();
+            //Factura.Datos();
+            DataTable ListaProductos = new DataTable();
+            ListaProductos = Factura.DatosConsultarPro(txtReferencia.Text);
+            for (int i = 0; i < ListaProductos.Rows.Count; i++)
+            {
+                txtReferencia.Text = ListaProductos.Rows[i]["Referencia"].ToString();
+                txtDescripcion.Text = ListaProductos.Rows[i]["Descripcion"].ToString();
+                txtValorUnitario.Text = ListaProductos.Rows[i]["ValorUnitario"].ToString();                
+            }
+        }
+
+        public void Calculo()
+        {
+            int Cantidad = 0;
+            float Valor = 0;
+            float resultado = 0;
+            if (txtCan.Text != "")
+            {                
+                Cantidad = int.Parse(txtCan.Text);
+            }
+            
+            
+            Valor = float.Parse(txtValorUnitario.Text);
+            resultado = Cantidad * Valor;
+            txtValorTotal.Text = Convert.ToString(resultado);
+
+        }
+        private void AgregarDataGridWiew()
+        {
+            dgvListaProductos.DataSource = NG.AgregarData(txtReferencia.Text, Codigo);
+        }
+
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            string Doc = txtDocumentoCliente.Text;
+            string Fecha = DateTime.UtcNow.ToString();
+            Codigo = Doc + Fecha;
+            NG.CrearFactura(int.Parse(txtCan.Text), int.Parse(txtValorTotal.Text),txtReferencia.Text,txtDocumentoCliente.Text, Codigo);
+            MessageBox.Show("Se inserto producto :)");            
+            AgregarDataGridWiew();
+            //Limpiar();
+        }
+
+        public void Limpiar()
+        {
+            txtReferencia.Clear();
+            txtDescripcion.Clear();
+            txtCan.Clear();
+            txtValorUnitario.Clear();
+            txtValorTotal.Clear();
+        }
+
+        private void txtCan_TextChanged(object sender, EventArgs e)
+        {
+            Calculo();           
+        }
     }
 }

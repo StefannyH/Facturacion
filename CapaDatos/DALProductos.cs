@@ -15,7 +15,7 @@ namespace Facturacion_Electronica.CapaDatos
         SqlDataReader dataReader;
         DataTable table = new DataTable();
 
-        public void CrearProducto(int referencia, string descripcion, float valorunitario)
+        public void CrearProducto(int referencia, string descripcion, float valorunitario, int Cantidad)
         {
             comando.Connection = con.OpenConnection();
             comando.CommandText = "sp_insertar_productos";
@@ -23,7 +23,7 @@ namespace Facturacion_Electronica.CapaDatos
             comando.Parameters.AddWithValue("@Referencia", referencia);
             comando.Parameters.AddWithValue("@Descripcion", descripcion);
             comando.Parameters.AddWithValue("@ValorUnitario", valorunitario);
-
+            comando.Parameters.AddWithValue("@Cantidad", Cantidad);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
         }

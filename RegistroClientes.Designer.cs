@@ -36,7 +36,6 @@
             this.lblDireccion = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbxRipoDocumento = new System.Windows.Forms.ComboBox();
             this.txtNombreComercial = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
@@ -46,6 +45,7 @@
             this.txtDocumento = new System.Windows.Forms.TextBox();
             this.lblDocumento = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.txtTipoDocumento = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegistroClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,15 +131,6 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Correo Eletronico";
             // 
-            // cbxRipoDocumento
-            // 
-            this.cbxRipoDocumento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbxRipoDocumento.FormattingEnabled = true;
-            this.cbxRipoDocumento.Location = new System.Drawing.Point(258, 79);
-            this.cbxRipoDocumento.Name = "cbxRipoDocumento";
-            this.cbxRipoDocumento.Size = new System.Drawing.Size(244, 27);
-            this.cbxRipoDocumento.TabIndex = 8;
-            // 
             // txtNombreComercial
             // 
             this.txtNombreComercial.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -221,12 +212,21 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // txtTipoDocumento
+            // 
+            this.txtTipoDocumento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtTipoDocumento.Location = new System.Drawing.Point(258, 82);
+            this.txtTipoDocumento.Name = "txtTipoDocumento";
+            this.txtTipoDocumento.Size = new System.Drawing.Size(244, 26);
+            this.txtTipoDocumento.TabIndex = 18;
+            // 
             // RegistroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(651, 467);
+            this.Controls.Add(this.txtTipoDocumento);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtDocumento);
             this.Controls.Add(this.lblDocumento);
@@ -236,7 +236,6 @@
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtNombreComercial);
-            this.Controls.Add(this.cbxRipoDocumento);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblDireccion);
@@ -264,7 +263,6 @@
         private Label lblDireccion;
         private Label label5;
         private Label label6;
-        private ComboBox cbxRipoDocumento;
         private TextBox txtNombreComercial;
         private TextBox txtDireccion;
         private TextBox txtTelefono;
@@ -274,5 +272,6 @@
         private TextBox txtDocumento;
         private Label lblDocumento;
         private Button btnEliminar;
+        private TextBox txtTipoDocumento;
     }
 }

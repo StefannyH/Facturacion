@@ -12,9 +12,9 @@ namespace Facturacion_Electronica.CapaNegocio
     {
         private DALProductos objetoCD = new DALProductos();
 
-        public void Create(int referencia, string descripcion, float valorunitario)
+        public void Create(int referencia, string descripcion, float valorunitario, int Cantidad)
         {
-            objetoCD.CrearProducto(referencia, descripcion, valorunitario);
+            objetoCD.CrearProducto(referencia, descripcion, valorunitario, Cantidad);
         }
 
         public DataTable View()

@@ -29,7 +29,7 @@ namespace Facturacion_Electronica
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            objetoCN.Create(int.Parse(txtReferencia.Text), txtDescripcion.Text, float.Parse(txtValorUnitario.Text));
+            objetoCN.Create(int.Parse(txtReferencia.Text), txtDescripcion.Text, float.Parse(txtValorUnitario.Text), int.Parse(txtCantidad.Text));
             MessageBox.Show("Se guardo correctamente el producto :)");
             viewAllProducts();
             Limpiar();
@@ -59,6 +59,7 @@ namespace Facturacion_Electronica
             txtReferencia.Clear();
             txtDescripcion.Clear();
             txtValorUnitario.Clear();
+            txtCantidad.Clear();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

@@ -10,6 +10,10 @@ namespace Facturacion_Electronica.CapaDatos
 {
     public  class Conexion
     {
+        //private Conexion con = new Conexion();
+        SqlCommand comando = new SqlCommand();
+        SqlDataReader dataReader;
+
         private SqlConnection Con = new
             SqlConnection("Data Source=DESKTOP-4PMJGRE;Initial Catalog=Facturacion;Integrated Security=True");
 
@@ -34,5 +38,24 @@ namespace Facturacion_Electronica.CapaDatos
                 Con.Close();
             return Con;
         }
+        public void llenarTipoDocumetoCliente(ComboBox cb)
+        {
+            try
+            {
+                comando = new SqlCommand("select TipoDocumento from Tbl_Clientes", Con);
+                dataReader = comando.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    cb.Items.Add(dataReader["TipoDocumento"].ToString());
+                }
+                dataReader.Close();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No se lleno el combobox" + ex.Message);
+            }
+        }
+
     }
 }

@@ -69,5 +69,24 @@ namespace Facturacion_Electronica.CapaDatos
             comando.Parameters.Clear();
         }
 
+        public void llenarTipoDocumetoCliente(ComboBox cb)
+        {
+            try
+            {
+                comando = new SqlCommand("select TipoDocumento from Tbl_Clientes");
+                dataReader = comando.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    cb.Items.Add(dataReader["TipoDocumento"].ToString());
+                }
+                dataReader.Close();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No se lleno el combobox" + ex.ToString());
+            }
+        }
+
     }
 }

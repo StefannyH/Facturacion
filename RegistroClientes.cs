@@ -8,12 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data;
+using Facturacion_Electronica.CapaDatos;
 
 namespace Facturacion_Electronica
 {
     public partial class RegistroClientes : Form
     {
+        
         BLLClientes objetoCN = new BLLClientes();
+        Conexion con = new Conexion();
 
         public RegistroClientes()
         {
@@ -30,11 +35,13 @@ namespace Facturacion_Electronica
         private void RegistroClientes_Load(object sender, EventArgs e)
         {
             viewAllClientes();
+            
         }
+        
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            objetoCN.Create(cbxRipoDocumento.Text, int.Parse(txtDocumento.Text), txtNombreComercial.Text, txtDireccion.Text, txtTelefono.Text,txtCorreo.Text);
+            objetoCN.Create(txtTipoDocumento.Text, int.Parse(txtDocumento.Text), txtNombreComercial.Text, txtDireccion.Text, txtTelefono.Text,txtCorreo.Text);
             MessageBox.Show("Se guardo correctamente el cliente :)");
             viewAllClientes();
             Limpiar();
@@ -46,6 +53,7 @@ namespace Facturacion_Electronica
         }
         public void Limpiar()
         {
+            txtTipoDocumento.Clear();
             txtDocumento.Clear();
             txtNombreComercial.Clear();
             txtDireccion.Clear();
@@ -55,7 +63,7 @@ namespace Facturacion_Electronica
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            objetoCN.Update(cbxRipoDocumento.Text, int.Parse(txtDocumento.Text), txtNombreComercial.Text, txtDireccion.Text, txtTelefono.Text, txtCorreo.Text);
+            objetoCN.Update(txtTipoDocumento.Text, int.Parse(txtDocumento.Text), txtNombreComercial.Text, txtDireccion.Text, txtTelefono.Text, txtCorreo.Text);
             MessageBox.Show("Se actualizo correctamente el cliente :)");
             viewAllClientes();
             Limpiar();

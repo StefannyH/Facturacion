@@ -32,5 +32,10 @@ namespace Facturacion_Electronica.CapaNegocio
         {
             objetoCD.UpdateClientes(TipoDocumento, Documento, NombreComercial, Direccion, Telefono, Correo);
         }
+
+        public void llenarcomboboxcliente(ComboBox TipoDocumento)
+        {
+            objetoCD.llenarTipoDocumetoCliente(TipoDocumento);
+        }
     }
 }

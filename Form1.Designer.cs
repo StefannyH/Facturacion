@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblClave = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblUsuario.Location = new System.Drawing.Point(158, 126);
+            this.lblUsuario.Location = new System.Drawing.Point(121, 221);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(61, 19);
             this.lblUsuario.TabIndex = 0;
@@ -50,7 +52,7 @@
             // 
             this.lblClave.AutoSize = true;
             this.lblClave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblClave.Location = new System.Drawing.Point(133, 168);
+            this.lblClave.Location = new System.Drawing.Point(96, 263);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(86, 19);
             this.lblClave.TabIndex = 1;
@@ -59,7 +61,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtUsuario.Location = new System.Drawing.Point(248, 123);
+            this.txtUsuario.Location = new System.Drawing.Point(211, 218);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(232, 26);
             this.txtUsuario.TabIndex = 2;
@@ -67,7 +69,7 @@
             // txtContrasena
             // 
             this.txtContrasena.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtContrasena.Location = new System.Drawing.Point(248, 161);
+            this.txtContrasena.Location = new System.Drawing.Point(211, 256);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(232, 26);
@@ -76,7 +78,7 @@
             // btnIngresar
             // 
             this.btnIngresar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnIngresar.Location = new System.Drawing.Point(248, 217);
+            this.btnIngresar.Location = new System.Drawing.Point(211, 312);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(78, 34);
             this.btnIngresar.TabIndex = 4;
@@ -88,11 +90,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(180, 64);
+            this.label1.Location = new System.Drawing.Point(144, 178);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 26);
             this.label1.TabIndex = 5;
             this.label1.Text = "Inicio de sesión";
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(196, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 138);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -100,6 +113,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(549, 357);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtContrasena);
@@ -121,5 +135,6 @@
         private TextBox txtContrasena;
         private Button btnIngresar;
         private Label label1;
+        private Button button1;
     }
 }
